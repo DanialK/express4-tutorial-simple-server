@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1 #{title}
+	form(id="", method="POST", action="/login").form-horizontal
+		div.form-group
+			label(for="username") Username
+			input(type="text", name="username" placeholder="Username").form-control
+		div.form-group
+			label(for="password") Passowrd
+			input(type="password", name="password" placeholder="Password").form-control
+		div.form-group
+			button(type="submit").btn.btn-default Submit
+			if message
+				div.alert.alert-danger 
+					h5 #{message}

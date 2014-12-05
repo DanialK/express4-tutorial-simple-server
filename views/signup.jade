@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	h1 #{title}
+	form(id="", method="POST", action="/signup").form-horizontal
+		div.form-group
+			label(for="username") Username
+			input(type="text", name="username" placeholder="Username").form-control
+		div.form-group
+			label(for="password") Passowrd
+			input(type="password", name="password" placeholder="Password").form-control
+		div.form-group
+			label(for="email") Email
+			input(type="email", name="email" placeholder="Email").form-control
+		div.form-group
+			label(for="first_name") First Name
+			input(type="text", name="first_name" placeholder="First Name").form-control
+		div.form-group
+			label(for="last_name") Last Name
+			input(type="text", name="last_name" placeholder="Last Name").form-control
+		div.form-group
+			button(type="submit").btn.btn-default Sign Up
